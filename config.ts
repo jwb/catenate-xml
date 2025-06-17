@@ -3,7 +3,7 @@ import { realpathSync } from "fs";
 import * as path from "path";
 
 let installPath = path.dirname(realpathSync(argv[1]));
-if (path.basename(installPath) == "dist") {
+if (path.basename(installPath) == "dist") { // be flexible to work with tsx or npx
     installPath = path.dirname(installPath);
 }
 export const defaultNamespace = env["CATENATE_DEFAULT_NAMESPACE"] ?? "http://www.opengis.net/kml/2.2";
