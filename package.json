@@ -1,0 +1,43 @@
+{
+  "name": "catenate-xml",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "vitest",
+    "prepare": "tsc",
+    "clean": "rm dist/*",
+    "prepublishOnly": "npm run test"
+  },
+  "bin": {
+    "catenate-xml": "dist/cli.js"
+  },
+  "author": "John Bito <jwbito@gmail.com>",
+  "license": "ISC",
+  "description": "Concatenate xml files by extracting the elements selected by an Xpath expression from each of file in a list and appending them as children of the specified element of the supplied template. Default configuration is suitable for combining kml files from a Google timeline into one, long history. Writes the XML to stdout. Also works as a module.",
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.10",
+    "@vitest/coverage-v8": "^3.0.5",
+    "tsc": "^2.0.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.4"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.7",
+    "xpath": "^0.0.34"
+  },
+  "files": [
+    "./dist/",
+    "./resources/"
+  ],
+  "keywords": [
+    "xml",
+    "concatenate",
+    "kml",
+    "append",
+    "combine"
+  ]
+}
