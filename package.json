@@ -11,7 +11,10 @@
     "clean": "rm dist/*",
     "prepublishOnly": "npm run test"
   },
-  "repository": "github:jwb/catenate-xml",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwb/catenate-xml.git"
+  },
   "bin": {
     "catenate-xml": "dist/cli.js"
   },

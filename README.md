@@ -6,7 +6,7 @@ A Node.js tool for catenating the sub-elements of a XML documents into a single-
 # Motivation
 When Google changed the timeline feature, we had the option of downloading our travel history. Google allowed downloading summary data in batch, but the details were only available to download through the web UI. Fortunately, I found [instructions to download KML files for each day of one's timeline](https://www.reddit.com/r/GoogleMaps/comments/1g1mbbo/guide_to_massbatch_download_all_your/). Having each day in a file is helpful, but I want to view my history, so I looked for a way to view all the KML files (one from each day in my timeline). 
 
-I didn't find any tools that will easily browse the series of files that represents my timeline, so I thought it would be easy to combine all the files into one. I'd forgotten about the intracacies of XML. I searched for some time for a tool that would simply extract specific elements from a list of files and catenate them into a single file. A bit of coding around XSLT would have been an option, but I decided to make a tool that would be easy to use by folks that want to create one KML file to represent (a piece of) their history.
+I didn't find any tools that will easily browse the series of files that represents my timeline, so I thought it would be easy to combine all the files into one. I'd forgotten about the intricacies of XML. I searched for some time for a tool that would simply extract specific elements from a list of files and catenate them into a single file. A bit of coding around XSLT would have been an option, but I decided to make a tool that would be easy to use by folks that want to create one KML file to represent (a piece of) their history.
 
 # Purpose
 
@@ -57,4 +57,4 @@ After ingesting the files, use the instance's `doc` property to serialize the re
 
 # Dependencies
 
-The dependencies selected seem to be fairly minimal and seemed to be the most-used JavaScript-based XML processors. Please add an issue on GitHub if you're aware of better XML, please open an issue on GitHub (and maybe a PR with a working replacement).
+The dependencies selected seem to be fairly minimal and seemed to be the most-used JavaScript-based XML processors. If you're aware of better XML libraries, please open an issue on GitHub (and maybe a PR with a working replacement).
