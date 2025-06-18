@@ -44,11 +44,10 @@ After installation, the `DocumentCollector` class is instantiated with the XSL e
 
     const collector = new DocumentCollector("//InterestingElementTag", 5);
 
-The instance must then load the document shell that will receive the child elements extracted from the inputs. The location in the document that where the extracted elements will be inserted as children. The order of the children is the order of the files listed, similar to using `cat` to catenate the files.
-
+The instance must then load the document shell that will receive the child elements extracted from the inputs. The location in the document where the extracted elements will be inserted as children is the other parameter.
     await collector.loadShellDocument("./template.xml", "//FutureParentOfCatenatedFileContents");
 
-Now the input files can be ingested.
+Now the input files can be ingested. The order of the children is the order of the files listed, similar to using `cat` to catenate the files.
 
     await collector.ingestFiles(argv.slice(2));
 
